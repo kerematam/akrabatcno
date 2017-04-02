@@ -1,0 +1,114 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button12").click(function() {
+			tc_new();
+		});
+	});
+
+	function pad(pad, str, padLeft) {
+		if (typeof str === 'undefined')
+			return pad;
+		if (padLeft) {
+			return (pad + str).slice(-pad.length);
+		} else {
+			return (str + pad).substring(0, pad.length);
+		}
+	}
+
+	function son_iki_hane(tc) {
+
+		var tc_rakam = new Array();
+		for (i = 10; i >= 0; i--) {
+			tc_rakam[i] = tc % 10;
+			tc = tc - tc_rakam[i];
+			tc = tc / 10;
+
+		}
+		
+		var cift = tc_rakam[0] + tc_rakam[2] + tc_rakam[4] + tc_rakam[6] + tc_rakam[8];
+		var tek = tc_rakam[1] + tc_rakam[3] + tc_rakam[5] + tc_rakam[7];
+
+		tc_rakam[9] = (7 * cift - tek) % 10;
+		tc_rakam[10] = (tc_rakam[9] + tc_rakam[8] + tc_rakam[7] + tc_rakam[6] + tc_rakam[5] + tc_rakam[4] + tc_rakam[3] + tc_rakam[2] + tc_rakam[1] + tc_rakam[0]) % 10;
+
+		return tc_rakam[9] * 10 + tc_rakam[10];
+
+	}
+
+
+	function tc_new() {
+		var print = "";
+		var tc = document.getElementById("text1").value;
+		var tc_sayisi = document.getElementById("text2").value;
+		var tc5digit = parseInt(tc.substring(0, 5));
+		var tc4digit = parseInt(tc.substring(5, 9));
+		var yasli = document.getElementById("yas").value;
+		console.log(yasli);
+
+		while (tc_sayisi) {
+
+			if (yasli > 0) {
+				
+				// ileri iterasyon, yaşı büyükler için
+				tc5digit += 3;
+				tc4digit -= 1;
+
+				// 6ıncı basamağa geçerse 00000'dan devam
+				if (tc5digit > 99999)
+					tc5digit = tc5digit - 100000;
+
+				// eksiye düşerse 9999'dan devam
+				if (tc4digit < 0)
+					tc4digit = tc4digit + 10000;
+
+			} else {
+				
+				// geri iterasyon, yaşı küçükler için
+				tc5digit -= 3;
+				tc4digit += 1;
+
+				if (tc4digit > 9999)
+					tc4digit = tc4digit - 10000;
+
+				if (tc5digit < 0)
+					tc5digit = tc5digit + 100000;
+
+			}
+
+
+			raw_tc = pad('00000', tc5digit.toString(), true) + pad('0000', tc4digit.toString(), true) + "00";
+			console.log(pad('00000', tc5digit.toString(), true) + pad('0000', tc4digit.toString(), true) + son_iki_hane(raw_tc));
+			print = print + pad('00000', tc5digit.toString(), true) + pad('0000', tc4digit.toString(), true) + pad('00', son_iki_hane(raw_tc), true) + " ";
+
+
+			tc_sayisi--;
+		}
+
+		$("p1").text(print).show();
+
+	}
+</script>
+
+<form>
+	<div class="style2">
+		<div class="style3">
+			<input type="text" id="text1" placeholder="TC numaranızı girin" title="TC numaranızı girin" />
+			<text>
+				<input type="text" width="200" id="text2" placeholder="Akraba sayısını girin..." title="tc no&#39;su üretilecek akraba sayısını girin" />
+			</text>
+			<select id="yas">
+				<option value="1">Daha Yaşlı Akrabalar</option>
+				<option value="0">Daha Genç Akrabalar</option>
+			</select>
+			<button12>
+				<input type="button" id="button" onclick="tc_new();" value="tc no üret" />
+			</button12>
+			<br />
+			<br />
+		</div>
+		<h3><p1></p1></h3>
+		<br />
+	</div>
+	<div text="kerem"></div>
+</form>
