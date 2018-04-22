@@ -17,7 +17,6 @@ Ardından 5 basamaklaı kısma 3 ekleyip, 4 basamaklı kısımdan 1 çıkarıld�
 
 Bu şekilde genelde sizden yaşça daha büyük bir akrabalarınızın kimlik numarasına ualşırısnız. Aynı şekilde 3 çıkartılıp, 1 eklediğiniz taktirde tam tersi gerçekleşir. Yukarı da bu hesaplamaları kolaylaştırma amacıyla JavaScript'te bu algoritmayı uygulamaya çalıştım. Program şuan dört dörtlük çalışmasa bile aşağı yukarı istenileni veriyor. Hataları düzeltmeye çalışıyorum henüz. Ben bu yolla en son 1903 doğumlu babamın halasının kimlik numarasına kadar yaklaşık 40 akrabamın kimlik numaralarına ulaştım. Çoktan vefat etmiş kişilerin bile kimlik numaralarının çıkarılması ilginç. Kişi hala yaşıyorsa ikamet ettiği adres bilgilerini http://www.ysk.gov.tr/ysk/index.html adresinden elde edebilirsiniz.
 
-http://akrabatcno.com
-
+http://akrabatcno.blogspot.com.tr/
 
 ## akrabatcno
