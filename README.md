@@ -1,4 +1,4 @@
-Akraba TC kimlik no algoritması 
+# Akraba TC kimlik no algoritması 
 
 Bilindiği üzere TC No toplamda 11 haneden oluşuyor. Fakat en sondaki iki hane kendisinden önce gelen dokuz haneden belli bir algoritmaya göre türetiliyor. Böylelikle rastgele uydurulan herhangi 11 haneli sayı TC kimlik no özelliğini taşımamış oluyor.
 
