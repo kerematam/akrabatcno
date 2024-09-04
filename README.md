@@ -1,4 +1,4 @@
-# Akraba TC kimlik no algoritması 
+# Akraba TC Kimlik No Algoritması 
 
 Bilindiği üzere TC No toplamda 11 haneden oluşuyor. Fakat en sondaki iki hane kendisinden önce gelen dokuz haneden belli bir algoritmaya göre türetiliyor. Böylelikle rastgele uydurulan herhangi 11 haneli sayı TC kimlik no özelliğini taşımamış oluyor.
 
@@ -15,8 +15,12 @@ Ardından 5 basamaklaı kısma 3 ekleyip, 4 basamaklı kısımdan 1 çıkarıld�
 
 Örnek(2):  11114- 1110 - 56
 
-Bu şekilde genelde sizden yaşça daha büyük bir akrabalarınızın kimlik numarasına ualşırısnız. Aynı şekilde 3 çıkartılıp, 1 eklediğiniz taktirde tam tersi gerçekleşir. Yukarı da bu hesaplamaları kolaylaştırma amacıyla JavaScript'te bu algoritmayı uygulamaya çalıştım. Program şuan dört dörtlük çalışmasa bile aşağı yukarı istenileni veriyor. Hataları düzeltmeye çalışıyorum henüz. Ben bu yolla en son 1903 doğumlu babamın halasının kimlik numarasına kadar yaklaşık 40 akrabamın kimlik numaralarına ulaştım. Çoktan vefat etmiş kişilerin bile kimlik numaralarının çıkarılması ilginç. Kişi hala yaşıyorsa ikamet ettiği adres bilgilerini http://www.ysk.gov.tr/ysk/index.html adresinden elde edebilirsiniz.
+Bu şekilde genelde sizden yaşça daha büyük bir akrabalarınızın kimlik numarasına ulaşırsınız. Aynı şekilde 3 çıkartılıp, 1 eklediğiniz taktirde tam tersi gerçekleşir. Yukarı da bu hesaplamaları kolaylaştırma amacıyla JavaScript'te bu algoritmayı uygulamaya çalıştım. Program şuan dört dörtlük çalışmasa bile aşağı yukarı istenileni veriyor. Hataları düzeltmeye çalışıyorum henüz. Ben bu yolla en son 1903 doğumlu babamın halasının kimlik numarasına kadar yaklaşık 40 akrabamın kimlik numaralarına ulaştım. Çoktan vefat etmiş kişilerin bile kimlik numaralarının çıkarılması ilginç.
 
-http://akrabatcno.blogspot.com.tr/
+## Demo
+- http://akrabatcno.blogspot.com.tr/
+- https://jsfiddle.net/kerematam/t4rju4ug/
 
-## akrabatcno
+## Keywords
+TC No Algoritmasi, TC No, TC Kimlik No, Akraba
+
